@@ -7,25 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		936670B11CCF297D00D0E848 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 936670B01CCF297D00D0E848 /* DataManager.m */; };
 		93A0D2CE1CCDEB0C00274803 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D2CD1CCDEB0C00274803 /* main.m */; };
 		93A0D2D11CCDEB0C00274803 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D2D01CCDEB0C00274803 /* AppDelegate.m */; };
-		93A0D2D41CCDEB0C00274803 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D2D31CCDEB0C00274803 /* ViewController.m */; };
 		93A0D2D71CCDEB0C00274803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D2D51CCDEB0C00274803 /* Main.storyboard */; };
 		93A0D2D91CCDEB0C00274803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D2D81CCDEB0C00274803 /* Assets.xcassets */; };
 		93A0D2DC1CCDEB0C00274803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D2DA1CCDEB0C00274803 /* LaunchScreen.storyboard */; };
+		93A0D2E81CCDEBEA00274803 /* DABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D2E71CCDEBEA00274803 /* DABaseViewController.m */; };
+		93A0D2EB1CCDEC4100274803 /* DABaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D2EA1CCDEC4100274803 /* DABaseTableViewController.m */; };
+		93A0D2EE1CCDECA000274803 /* DATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D2ED1CCDECA000274803 /* DATableViewCell.m */; };
+		93A0D2F11CCDED6B00274803 /* DALoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D2F01CCDED6B00274803 /* DALoginViewController.m */; };
+		93A0D2F41CCDED9000274803 /* DAPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D2F31CCDED9000274803 /* DAPracticeViewController.m */; };
+		93A0D2F71CCDEE2700274803 /* DAPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D2F61CCDEE2700274803 /* DAPatientViewController.m */; };
+		93A0D2FA1CCDEE4400274803 /* DAProviderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D2F91CCDEE4400274803 /* DAProviderViewController.m */; };
+		93A0D2FC1CCDF3E500274803 /* Practice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D2FB1CCDF3E500274803 /* Practice.storyboard */; };
+		93A0D2FE1CCDF40000274803 /* Provider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D2FD1CCDF40000274803 /* Provider.storyboard */; };
+		93A0D3001CCDF41300274803 /* Patient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D2FF1CCDF41300274803 /* Patient.storyboard */; };
+		93A0D30D1CCE223800274803 /* DAAppointmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D30C1CCE223800274803 /* DAAppointmentViewController.m */; };
+		93A0D3111CCE2DB700274803 /* NetworkPList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93A0D3101CCE2DB700274803 /* NetworkPList.plist */; };
+		93A0D31C1CCE391200274803 /* DAProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D31B1CCE391200274803 /* DAProvider.m */; };
+		93A0D31F1CCE392700274803 /* DAPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D31E1CCE392700274803 /* DAPatient.m */; };
+		93A0D3221CCE393B00274803 /* DAAppointment.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A0D3211CCE393B00274803 /* DAAppointment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		936670AF1CCF297D00D0E848 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		936670B01CCF297D00D0E848 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		93A0D2C91CCDEB0C00274803 /* DocAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A0D2CD1CCDEB0C00274803 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93A0D2CF1CCDEB0C00274803 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93A0D2D01CCDEB0C00274803 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		93A0D2D21CCDEB0C00274803 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		93A0D2D31CCDEB0C00274803 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		93A0D2D61CCDEB0C00274803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93A0D2D81CCDEB0C00274803 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93A0D2DB1CCDEB0C00274803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93A0D2DD1CCDEB0C00274803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A0D2E61CCDEBEA00274803 /* DABaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseViewController.h; sourceTree = "<group>"; };
+		93A0D2E71CCDEBEA00274803 /* DABaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseViewController.m; sourceTree = "<group>"; };
+		93A0D2E91CCDEC4100274803 /* DABaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DABaseTableViewController.h; sourceTree = "<group>"; };
+		93A0D2EA1CCDEC4100274803 /* DABaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DABaseTableViewController.m; sourceTree = "<group>"; };
+		93A0D2EC1CCDECA000274803 /* DATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DATableViewCell.h; sourceTree = "<group>"; };
+		93A0D2ED1CCDECA000274803 /* DATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DATableViewCell.m; sourceTree = "<group>"; };
+		93A0D2EF1CCDED6B00274803 /* DALoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DALoginViewController.h; path = ../DALoginViewController.h; sourceTree = "<group>"; };
+		93A0D2F01CCDED6B00274803 /* DALoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DALoginViewController.m; path = ../DALoginViewController.m; sourceTree = "<group>"; };
+		93A0D2F21CCDED9000274803 /* DAPracticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAPracticeViewController.h; path = ../DAPracticeViewController.h; sourceTree = "<group>"; };
+		93A0D2F31CCDED9000274803 /* DAPracticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAPracticeViewController.m; path = ../DAPracticeViewController.m; sourceTree = "<group>"; };
+		93A0D2F51CCDEE2700274803 /* DAPatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAPatientViewController.h; path = ../DAPatientViewController.h; sourceTree = "<group>"; };
+		93A0D2F61CCDEE2700274803 /* DAPatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAPatientViewController.m; path = ../DAPatientViewController.m; sourceTree = "<group>"; };
+		93A0D2F81CCDEE4400274803 /* DAProviderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAProviderViewController.h; path = ../DAProviderViewController.h; sourceTree = "<group>"; };
+		93A0D2F91CCDEE4400274803 /* DAProviderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAProviderViewController.m; path = ../DAProviderViewController.m; sourceTree = "<group>"; };
+		93A0D2FB1CCDF3E500274803 /* Practice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Practice.storyboard; sourceTree = "<group>"; };
+		93A0D2FD1CCDF40000274803 /* Provider.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Provider.storyboard; sourceTree = "<group>"; };
+		93A0D2FF1CCDF41300274803 /* Patient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Patient.storyboard; sourceTree = "<group>"; };
+		93A0D30B1CCE223800274803 /* DAAppointmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAppointmentViewController.h; sourceTree = "<group>"; };
+		93A0D30C1CCE223800274803 /* DAAppointmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAppointmentViewController.m; sourceTree = "<group>"; };
+		93A0D3101CCE2DB700274803 /* NetworkPList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NetworkPList.plist; sourceTree = "<group>"; };
+		93A0D3181CCE335100274803 /* DAAppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DAAppConstants.h; path = ../Category/DAAppConstants.h; sourceTree = "<group>"; };
+		93A0D31A1CCE391200274803 /* DAProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAProvider.h; sourceTree = "<group>"; };
+		93A0D31B1CCE391200274803 /* DAProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAProvider.m; sourceTree = "<group>"; };
+		93A0D31D1CCE392700274803 /* DAPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAPatient.h; sourceTree = "<group>"; };
+		93A0D31E1CCE392700274803 /* DAPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAPatient.m; sourceTree = "<group>"; };
+		93A0D3201CCE393B00274803 /* DAAppointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAAppointment.h; sourceTree = "<group>"; };
+		93A0D3211CCE393B00274803 /* DAAppointment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAAppointment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +102,17 @@
 			children = (
 				93A0D2CF1CCDEB0C00274803 /* AppDelegate.h */,
 				93A0D2D01CCDEB0C00274803 /* AppDelegate.m */,
-				93A0D2D21CCDEB0C00274803 /* ViewController.h */,
-				93A0D2D31CCDEB0C00274803 /* ViewController.m */,
 				93A0D2D51CCDEB0C00274803 /* Main.storyboard */,
+				93A0D2FB1CCDF3E500274803 /* Practice.storyboard */,
+				93A0D2FD1CCDF40000274803 /* Provider.storyboard */,
+				93A0D2FF1CCDF41300274803 /* Patient.storyboard */,
 				93A0D2D81CCDEB0C00274803 /* Assets.xcassets */,
 				93A0D2DA1CCDEB0C00274803 /* LaunchScreen.storyboard */,
 				93A0D2DD1CCDEB0C00274803 /* Info.plist */,
+				93A0D2E51CCDEB4E00274803 /* ViewController */,
+				93A0D2E31CCDEB4E00274803 /* BaseViewController */,
+				93A0D2E41CCDEB4E00274803 /* DataManager */,
+				93A0D3191CCE38F300274803 /* Objects */,
 				93A0D2CC1CCDEB0C00274803 /* Supporting Files */,
 			);
 			path = DocAppTest;
@@ -77,6 +124,92 @@
 				93A0D2CD1CCDEB0C00274803 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93A0D2E31CCDEB4E00274803 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93A0D2E61CCDEBEA00274803 /* DABaseViewController.h */,
+				93A0D2E71CCDEBEA00274803 /* DABaseViewController.m */,
+				93A0D2E91CCDEC4100274803 /* DABaseTableViewController.h */,
+				93A0D2EA1CCDEC4100274803 /* DABaseTableViewController.m */,
+				93A0D2EC1CCDECA000274803 /* DATableViewCell.h */,
+				93A0D2ED1CCDECA000274803 /* DATableViewCell.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		93A0D2E41CCDEB4E00274803 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				936670AF1CCF297D00D0E848 /* DataManager.h */,
+				936670B01CCF297D00D0E848 /* DataManager.m */,
+				93A0D3101CCE2DB700274803 /* NetworkPList.plist */,
+				93A0D3181CCE335100274803 /* DAAppConstants.h */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		93A0D2E51CCDEB4E00274803 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93A0D3011CCDF64500274803 /* Login */,
+				93A0D3021CCDF65A00274803 /* Practice */,
+				93A0D3031CCDF66B00274803 /* Provider */,
+				93A0D3041CCDF67C00274803 /* Patient */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		93A0D3011CCDF64500274803 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				93A0D2EF1CCDED6B00274803 /* DALoginViewController.h */,
+				93A0D2F01CCDED6B00274803 /* DALoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		93A0D3021CCDF65A00274803 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				93A0D2F21CCDED9000274803 /* DAPracticeViewController.h */,
+				93A0D2F31CCDED9000274803 /* DAPracticeViewController.m */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		93A0D3031CCDF66B00274803 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				93A0D2F81CCDEE4400274803 /* DAProviderViewController.h */,
+				93A0D2F91CCDEE4400274803 /* DAProviderViewController.m */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		93A0D3041CCDF67C00274803 /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				93A0D2F51CCDEE2700274803 /* DAPatientViewController.h */,
+				93A0D2F61CCDEE2700274803 /* DAPatientViewController.m */,
+				93A0D30B1CCE223800274803 /* DAAppointmentViewController.h */,
+				93A0D30C1CCE223800274803 /* DAAppointmentViewController.m */,
+			);
+			path = Patient;
+			sourceTree = "<group>";
+		};
+		93A0D3191CCE38F300274803 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				93A0D31A1CCE391200274803 /* DAProvider.h */,
+				93A0D31B1CCE391200274803 /* DAProvider.m */,
+				93A0D31D1CCE392700274803 /* DAPatient.h */,
+				93A0D31E1CCE392700274803 /* DAPatient.m */,
+				93A0D3201CCE393B00274803 /* DAAppointment.h */,
+				93A0D3211CCE393B00274803 /* DAAppointment.m */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				93A0D2DC1CCDEB0C00274803 /* LaunchScreen.storyboard in Resources */,
+				93A0D2FC1CCDF3E500274803 /* Practice.storyboard in Resources */,
+				93A0D2FE1CCDF40000274803 /* Provider.storyboard in Resources */,
 				93A0D2D91CCDEB0C00274803 /* Assets.xcassets in Resources */,
+				93A0D3111CCE2DB700274803 /* NetworkPList.plist in Resources */,
+				93A0D3001CCDF41300274803 /* Patient.storyboard in Resources */,
 				93A0D2D71CCDEB0C00274803 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,9 +286,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A0D2D41CCDEB0C00274803 /* ViewController.m in Sources */,
+				93A0D3221CCE393B00274803 /* DAAppointment.m in Sources */,
+				93A0D2F41CCDED9000274803 /* DAPracticeViewController.m in Sources */,
 				93A0D2D11CCDEB0C00274803 /* AppDelegate.m in Sources */,
+				93A0D2F11CCDED6B00274803 /* DALoginViewController.m in Sources */,
+				93A0D2EB1CCDEC4100274803 /* DABaseTableViewController.m in Sources */,
+				93A0D2E81CCDEBEA00274803 /* DABaseViewController.m in Sources */,
+				93A0D2F71CCDEE2700274803 /* DAPatientViewController.m in Sources */,
+				93A0D30D1CCE223800274803 /* DAAppointmentViewController.m in Sources */,
 				93A0D2CE1CCDEB0C00274803 /* main.m in Sources */,
+				936670B11CCF297D00D0E848 /* DataManager.m in Sources */,
+				93A0D2FA1CCDEE4400274803 /* DAProviderViewController.m in Sources */,
+				93A0D2EE1CCDECA000274803 /* DATableViewCell.m in Sources */,
+				93A0D31C1CCE391200274803 /* DAProvider.m in Sources */,
+				93A0D31F1CCE392700274803 /* DAPatient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +446,7 @@
 				93A0D2E21CCDEB0C00274803 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

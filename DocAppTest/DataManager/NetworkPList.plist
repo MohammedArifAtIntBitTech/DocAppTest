@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BASE_SERVER_URL</key>
+	<string>https://dev1.intbittech.com/DocAppAPI-1.0/api/</string>
+	<key>ALL_PROVIDERS</key>
+	<string>provider/getProviders</string>
+	<key>ALL_PATIENTS</key>
+	<string>patient/getPatients</string>
+	<key>ALL_APPOINTMENTS</key>
+	<string>appointment/getAppointments</string>
+</dict>
+</plist>

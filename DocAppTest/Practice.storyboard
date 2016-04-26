@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Providers-->
+        <scene sceneID="4I3-tA-YSa">
+            <objects>
+                <viewController storyboardIdentifier="practice" id="qee-65-0sc" customClass="DAProviderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZI8-rg-O1h"/>
+                        <viewControllerLayoutGuide type="bottom" id="jan-vY-9va"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZUy-5j-AeL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hzV-wm-sWv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="default" rowHeight="96" id="Cl7-MC-LBm" customClass="DATableViewCell">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cl7-MC-LBm" id="mHt-fv-N5N">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProviderName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ket-hY-cTO">
+                                                    <rect key="frame" x="10" y="20" width="580" height="55"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Ket-hY-cTO" secondAttribute="trailing" constant="10" id="GkH-2f-IHu"/>
+                                                <constraint firstItem="Ket-hY-cTO" firstAttribute="top" secondItem="mHt-fv-N5N" secondAttribute="top" constant="20" id="P3w-wQ-E4h"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ket-hY-cTO" secondAttribute="bottom" constant="20" id="adj-zA-Sfr"/>
+                                                <constraint firstItem="Ket-hY-cTO" firstAttribute="leading" secondItem="mHt-fv-N5N" secondAttribute="leading" constant="10" id="jZw-kT-b9j"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="practiceName" destination="Ket-hY-cTO" id="DDr-ww-qxz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qee-65-0sc" id="1va-cP-PMB"/>
+                                    <outlet property="delegate" destination="qee-65-0sc" id="gIZ-Ku-513"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hzV-wm-sWv" firstAttribute="top" secondItem="ZUy-5j-AeL" secondAttribute="top" id="YKL-zk-SP7"/>
+                            <constraint firstItem="hzV-wm-sWv" firstAttribute="bottom" secondItem="jan-vY-9va" secondAttribute="top" id="d2O-gd-25L"/>
+                            <constraint firstAttribute="trailing" secondItem="hzV-wm-sWv" secondAttribute="trailing" id="rgB-Fd-x9r"/>
+                            <constraint firstItem="hzV-wm-sWv" firstAttribute="leading" secondItem="ZUy-5j-AeL" secondAttribute="leading" id="tS7-Qa-fRT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Providers" id="eHr-f1-AMh">
+                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="LfI-rw-QNh">
+                            <connections>
+                                <action selector="logout:" destination="qee-65-0sc" id="9Wb-uz-yBT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="hzV-wm-sWv" id="N1U-wJ-big"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mPz-ur-xFC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="445"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="klS-HD-qyB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZNe-C5-Fmo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WCg-8S-XsW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qee-65-0sc" kind="relationship" relationship="rootViewController" id="1iG-0J-a6w"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BoQ-fa-4Qu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="445"/>
+        </scene>
+    </scenes>
+</document>

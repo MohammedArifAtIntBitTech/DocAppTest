@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Patients-->
+        <scene sceneID="cwa-oF-KfE">
+            <objects>
+                <viewController storyboardIdentifier="provider" id="Ovt-tz-Ibw" customClass="DAPatientViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a9f-oS-npG"/>
+                        <viewControllerLayoutGuide type="bottom" id="bOX-2X-2Wo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zSN-G1-xCs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iJW-3c-Kn7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="default" rowHeight="94" id="UUw-pP-vAp" customClass="DATableViewCell">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UUw-pP-vAp" id="Jsk-9I-TIS">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="93"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PateintName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpN-7z-7TQ">
+                                                    <rect key="frame" x="10" y="20" width="580" height="53"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gpN-7z-7TQ" firstAttribute="top" secondItem="Jsk-9I-TIS" secondAttribute="top" constant="20" id="OZR-0R-HXQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="gpN-7z-7TQ" secondAttribute="trailing" constant="10" id="fTS-ON-cw8"/>
+                                                <constraint firstItem="gpN-7z-7TQ" firstAttribute="leading" secondItem="Jsk-9I-TIS" secondAttribute="leading" constant="10" id="iCl-Ss-KoM"/>
+                                                <constraint firstAttribute="bottom" secondItem="gpN-7z-7TQ" secondAttribute="bottom" constant="20" id="pbd-DB-pPs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="providerName" destination="gpN-7z-7TQ" id="WoH-Uu-byI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ovt-tz-Ibw" id="Qsy-fK-CIw"/>
+                                    <outlet property="delegate" destination="Ovt-tz-Ibw" id="dtp-8j-Z90"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iJW-3c-Kn7" firstAttribute="bottom" secondItem="bOX-2X-2Wo" secondAttribute="top" id="4Fe-2O-eGu"/>
+                            <constraint firstAttribute="trailing" secondItem="iJW-3c-Kn7" secondAttribute="trailing" id="Sey-Ip-nhR"/>
+                            <constraint firstItem="iJW-3c-Kn7" firstAttribute="leading" secondItem="zSN-G1-xCs" secondAttribute="leading" id="vgm-57-EY9"/>
+                            <constraint firstItem="iJW-3c-Kn7" firstAttribute="top" secondItem="zSN-G1-xCs" secondAttribute="top" id="y6G-Ok-m4K"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Patients" id="VVs-hu-XaQ">
+                        <barButtonItem key="leftBarButtonItem" title="LogOut" id="zby-pd-jU5">
+                            <connections>
+                                <action selector="logout:" destination="Ovt-tz-Ibw" id="1Ou-tU-vE1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="iJW-3c-Kn7" id="Ymk-Ps-qCm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjY-yQ-ofE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056" y="431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JBK-zs-wBW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e28-bb-u0n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="46j-Gb-1Tk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ovt-tz-Ibw" kind="relationship" relationship="rootViewController" id="3WS-er-6aY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXP-h5-b1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382" y="431"/>
+        </scene>
+    </scenes>
+</document>

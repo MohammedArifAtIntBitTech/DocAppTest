@@ -1,0 +1,49 @@
+//
+//  DAPatientViewController.m
+//  DocAppTest
+//
+//  Created by IntBitRavi on 4/25/16.
+//  Copyright © 2016 Intbit. All rights reserved.
+//
+
+#import "DAPatientViewController.h"
+#import "DAAppConstants.h"
+#import "DataManager.h"
+
+
+@interface DAPatientViewController ()
+
+@end
+
+@implementation DAPatientViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [[DataManager getInstance] getDataFromURL:kAllPatients parameter:nil onSuccess:^(NSData *data) {
+        NSLog(@"%@",data);
+        NSString* dataString;
+        dataString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+        NSLog(@"data is : %@", dataString);
+    } onError:^(NSError *error) {
+        
+    }];
+
+    // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+@end

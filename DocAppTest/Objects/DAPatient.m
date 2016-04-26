@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  DAPatient.m
 //  DocAppTest
 //
 //  Created by IntBitRavi on 4/25/16.
 //  Copyright © 2016 Intbit. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DAPatient.h"
 
-@interface ViewController : UIViewController
-
+@implementation DAPatient
 
 @end
-
