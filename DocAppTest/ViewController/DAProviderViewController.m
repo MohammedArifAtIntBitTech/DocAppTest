@@ -27,13 +27,13 @@
     [[DataManager getInstance] getDataFromURL:kAllProviders parameter:nil onSuccess:^(NSData *data) {
         NSDictionary *userResponse =[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         NSMutableArray *userResponseArray = [[userResponse objectForKey:@"d"]objectForKey:@"providers"];
-        userArray = [[NSMutableArray alloc] init];
+        self.userArray = [[NSMutableArray alloc] init];
         for (int index = 0; index< [userResponseArray count]; index++) {
             DAProvider *user = [[DAProvider alloc] init];
             user.fullName =[[userResponseArray objectAtIndex:index] objectForKey:@"fullName"];
-            [userArray addObject:user];
+            [self.userArray addObject:user];
         }
-        [self setDataArray:[userArray copy]];
+        [self setDataArray:[self.userArray copy]];
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     } onError:^(NSError *error) {
         

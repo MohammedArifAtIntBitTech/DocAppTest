@@ -9,10 +9,8 @@
 #import "DABaseTableViewController.h"
 
 @interface DAPatientViewController : DABaseTableViewController
-{
-    NSMutableArray *userArray;
-    
-}
+@property (strong, nonatomic) NSMutableArray *userArray;
+
 @property (strong, nonatomic) NSMutableArray *filteredData;
 
 @end
