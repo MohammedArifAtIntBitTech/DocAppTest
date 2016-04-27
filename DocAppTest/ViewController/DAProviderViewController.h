@@ -9,5 +9,11 @@
 #import "DABaseTableViewController.h"
 
 @interface DAProviderViewController : DABaseTableViewController
+{
+    NSMutableArray *userArray;
+    
+}
+@property (strong, nonatomic) NSMutableArray *filteredData;
+
 
 @end

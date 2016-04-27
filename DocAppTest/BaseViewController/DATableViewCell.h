@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface DATableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UILabel *practiceName;
+
 @property (strong, nonatomic) IBOutlet UILabel *providerName;
+@property (strong, nonatomic) IBOutlet UILabel *patientName;
 @property (strong, nonatomic) IBOutlet UILabel *appointments;
 
 @end

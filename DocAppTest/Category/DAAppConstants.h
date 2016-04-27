@@ -22,3 +22,4 @@
 #define kAllProviders           @"ALL_PROVIDERS"
 #define kAllPatients            @"ALL_PATIENTS"
 #define kAllAppointment         @"ALL_APPOINTMENTS"
+#define kAllPractices           @"ALL_PRACTICES"

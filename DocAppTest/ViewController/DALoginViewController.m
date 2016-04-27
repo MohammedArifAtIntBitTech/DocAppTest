@@ -39,21 +39,18 @@
 #pragma mark - Action
 
 - (IBAction)signIn:(id)sender {
-    if([self.nameField.text  isEqualToString:@"Practice1"] && [self.passwordField.text isEqualToString:@"Password1"])
-    {
+    if([self.UsernameField.text  isEqualToString:@"Practice1"] && [self.passwordField.text isEqualToString:@"Password1"]){
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Practice" bundle:nil];
         UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"practice"];
         [self.navigationController showViewController:vc sender:nil];
         
-    }else if([self.nameField.text  isEqualToString:@"Provider1"] && [self.passwordField.text isEqualToString:@"Password1"])
-    {
+    }else if([self.UsernameField.text  isEqualToString:@"Provider1"] && [self.passwordField.text isEqualToString:@"Password1"]){
         UIStoryboard *storyboard1 = [UIStoryboard storyboardWithName:@"Provider" bundle:nil];
         UIViewController *wc = [storyboard1 instantiateViewControllerWithIdentifier:@"provider"];
         [self.navigationController showViewController:wc sender:nil];
         
         
-    }else if([self.nameField.text  isEqualToString:@"Patient1"] && [self.passwordField.text isEqualToString:@"Password1"])
-    {
+    }else if([self.UsernameField.text  isEqualToString:@"Patient1"] && [self.passwordField.text isEqualToString:@"Password1"]){
         UIStoryboard *storyboard2 = [UIStoryboard storyboardWithName:@"Patient" bundle:nil];
         UIViewController *qc = [storyboard2 instantiateViewControllerWithIdentifier:@"appointment"];
         [self.navigationController showViewController:qc sender:nil];
@@ -61,17 +58,14 @@
     }else{
         UIAlertController * alert=   [UIAlertController alertControllerWithTitle:@"Username or Password is incorrect. Please Try Again" message:nil preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", @"OK action") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            NSLog(@"OK action");
         }];
         
         [alert addAction:okAction];
         [self presentViewController:alert animated:YES completion:nil];
-        self.nameField.text =@"";
+        self.UsernameField.text =@"";
         self.passwordField.text = @"";
-        
-        
     }
-    self.nameField.text =@"";
+    self.UsernameField.text =@"";
     self.passwordField.text = @"";
     
 }

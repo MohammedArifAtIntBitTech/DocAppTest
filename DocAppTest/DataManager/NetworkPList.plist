@@ -10,5 +10,7 @@
 	<string>patient/getPatients</string>
 	<key>ALL_APPOINTMENTS</key>
 	<string>appointment/getAppointments</string>
+	<key>ALL_PRACTICES</key>
+	<string>practice/getPractices</string>
 </dict>
 </plist>

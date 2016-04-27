@@ -20,5 +20,4 @@
 
 - (void)getAcessToken:(NSString *)baseUrl onSuccess:(void(^)(NSData *data))_onSuccess onError:(void(^)(NSError *error))_onError;
 
-
 @end

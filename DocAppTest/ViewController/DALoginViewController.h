@@ -9,7 +9,8 @@
 #import "DABaseViewController.h"
 
 @interface DALoginViewController : DABaseViewController
-@property (strong, nonatomic) IBOutlet UITextField *nameField;
+
+@property (strong, nonatomic) IBOutlet UITextField *UsernameField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
 
 - (IBAction)signIn:(id)sender;

@@ -11,6 +11,8 @@
 #import "DataManager.h"
 #import "DAAppConstants.h"
 #import "DATableViewCell.h"
+#import "DAProvider.h"
+
 
 
 
@@ -25,19 +27,17 @@
     [[DataManager getInstance] getDataFromURL:kAllProviders parameter:nil onSuccess:^(NSData *data) {
         NSDictionary *userResponse =[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         NSMutableArray *userResponseArray = [[userResponse objectForKey:@"d"]objectForKey:@"providers"];
-        NSLog(@"%@",userResponseArray);
-        NSMutableArray *array = [[NSMutableArray alloc]init];
+        userArray = [[NSMutableArray alloc] init];
         for (int index = 0; index< [userResponseArray count]; index++) {
-            NSString *providerNames = [[userResponseArray objectAtIndex:index]objectForKey:@"fullName"];
-            [array addObject:providerNames];
+            DAProvider *user = [[DAProvider alloc] init];
+            user.fullName =[[userResponseArray objectAtIndex:index] objectForKey:@"fullName"];
+            [userArray addObject:user];
         }
-        NSLog(@"%@", array);
-        self.dataArray = array;
-        NSLog(@"%@",self.dataArray);
+        [self setDataArray:[userArray copy]];
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     } onError:^(NSError *error) {
         
     }];
-    
     // Do any additional setup after loading the view.
 }
 
@@ -47,28 +47,30 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataArray.count;
+    if (self.filteredData) {
+        return [self.filteredData count];
+    }
+    return [self.dataArray count];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"default" forIndexPath:indexPath];
-    cell.practiceName.text = [self.dataArray objectAtIndex:indexPath.row];
+    DAProvider *user = self.filteredData?self.filteredData[indexPath.row]:self.dataArray[indexPath.row];
+    cell.providerName.text = [NSString stringWithFormat:@"%@",user.fullName];
     return cell;
 }
-
-
 
 @end

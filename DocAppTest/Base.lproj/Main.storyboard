@@ -63,7 +63,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="DocApp" id="0UL-xn-DpE"/>
                     <connections>
-                        <outlet property="nameField" destination="0CK-yK-peK" id="hiS-Kq-RbZ"/>
+                        <outlet property="UsernameField" destination="0CK-yK-peK" id="VNd-dm-nPt"/>
                         <outlet property="passwordField" destination="STk-fY-Te7" id="bSh-2A-0R9"/>
                     </connections>
                 </viewController>

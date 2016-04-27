@@ -43,7 +43,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="providerName" destination="gpN-7z-7TQ" id="WoH-Uu-byI"/>
+                                            <outlet property="patientName" destination="gpN-7z-7TQ" id="VTQ-PD-lOz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -21,7 +21,6 @@
     [[DataManager getInstance] getAcessToken:@"https://dev1.intbittech.com/DocAppAPI-1.0/api/oauth/token?username=admin&password=admin&grant_type=password" onSuccess:^(NSData *data) {
         NSDictionary *dictionary  = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         self.accessToken = [[NSMutableString alloc] initWithFormat:@"%@ %@",[dictionary objectForKey:@"token_type"],[dictionary objectForKey:@"access_token"]];
-        NSLog(@"Acesstoken is %@",self.accessToken);
     } onError:^(NSError *error) {
         NSLog(@"Error is %@",error);
     }];

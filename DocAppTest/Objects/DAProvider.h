@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString *Provider_id;
 @property (nonatomic, strong) NSString *firstName;
 @property (nonatomic, strong) NSString *lastName;
+@property (nonatomic, strong) NSString *fullName;
 @property (nonatomic, strong) NSString *userId;
 @property (nonatomic, strong) NSString *prefix;
 @property (nonatomic, strong) NSString *phoneNumber;
