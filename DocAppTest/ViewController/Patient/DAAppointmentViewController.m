@@ -9,6 +9,8 @@
 #import "DAAppointmentViewController.h"
 #import "DAAppConstants.h"
 #import "DataManager.h"
+#import "DAProvider.h"
+#import "DATableViewCell.h"
 
 
 @interface DAAppointmentViewController ()
@@ -19,11 +21,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[DataManager getInstance] getDataFromURL:kAllAppointment parameter:nil onSuccess:^(NSData *data) {
-        NSLog(@"%@",data);
-        NSString* dataString;
-        dataString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-        NSLog(@"data is : %@", dataString);
+    [[DataManager getInstance] getDataFromURL:kAllProviders parameter:nil onSuccess:^(NSData *data) {
+        NSDictionary *userResponse =[NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSMutableArray *userResponseArray = [[userResponse objectForKey:@"d"]objectForKey:@"providers"];
+        userArray = [[NSMutableArray alloc] init];
+        for (int index = 0; index< [userResponseArray count]; index++) {
+            DAProvider *user = [[DAProvider alloc] init];
+            user.lastName =[[userResponseArray objectAtIndex:index] objectForKey:@"lastName"];
+            [userArray addObject:user];
+        }
+        [self setDataArray:[userArray copy]];
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     } onError:^(NSError *error) {
         
     }];
@@ -44,5 +52,22 @@
  // Pass the selected object to the new view controller.
  }
  */
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (self.filteredData) {
+        return [self.filteredData count];
+    }
+    return [self.dataArray count];
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"default" forIndexPath:indexPath];
+    DAProvider *user = self.filteredData?self.filteredData[indexPath.row]:self.dataArray[indexPath.row];
+    cell.appointments.text = [NSString stringWithFormat:@"%@",user.lastName];
+    return cell;
+}
 
 @end

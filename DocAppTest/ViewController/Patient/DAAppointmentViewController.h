@@ -9,5 +9,10 @@
 #import "DABaseTableViewController.h"
 
 @interface DAAppointmentViewController : DABaseTableViewController
+{
+    NSMutableArray *userArray;
+    
+}
+@property (strong, nonatomic) NSMutableArray *filteredData;
 
 @end
