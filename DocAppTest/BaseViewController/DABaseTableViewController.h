@@ -9,5 +9,7 @@
 #import "DABaseViewController.h"
 
 @interface DABaseTableViewController : DABaseViewController
+
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @end

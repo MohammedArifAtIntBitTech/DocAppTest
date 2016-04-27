@@ -28,6 +28,7 @@
     self = [super init];
     if (self) {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:@"NetworkPList" ofType:@"plist"];
+        
         self.BASE_URL = [[NSDictionary alloc] initWithContentsOfFile:filePath];
     }
     return self;
@@ -36,10 +37,9 @@
 -(NSString *)getURL:(NSString *)ObjectKey {
     
     NSMutableString *BASE_URL = [NSMutableString stringWithString:[self.BASE_URL objectForKey:kBaseUrl]];
-    NSArray *arryvalue  = [ObjectKey componentsSeparatedByString:@"_"];
-    NSString *subString = [arryvalue objectAtIndex:0];
-    subString = [subString substringToIndex:[subString length]-1];
+    
     NSString *objectURL =[self.BASE_URL objectForKey:ObjectKey];
+    
     if (objectURL) {
         [BASE_URL appendString:objectURL];
     }
@@ -49,9 +49,13 @@
 - (void)getAcessToken:(NSString *)baseUrl onSuccess:(void(^)(NSData *data))_onSuccess onError:(void(^)(NSError *error))_onError  {
     
     NSURLSessionConfiguration *configurationSession = [NSURLSessionConfiguration defaultSessionConfiguration];
+    
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:configurationSession delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    
     NSMutableString *mainUrl = [[NSMutableString alloc] initWithString:baseUrl];
+    
     NSMutableURLRequest *requestUrl = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:mainUrl]];
+    
     [requestUrl setValue:@"Basic aW50Yml0YXBwOmludGJpdHRlY2gyMDE1" forHTTPHeaderField:@"Authorization"];
     
     NSURLSessionDataTask *dataTask = [defaultSession dataTaskWithRequest:requestUrl completionHandler:^(NSData * data, NSURLResponse * response, NSError * error) {
@@ -72,23 +76,16 @@
 -(void)getDataFromURL:(NSString *)baseUrl parameter:(NSDictionary *)dictParameter  onSuccess:(void(^)(NSData *data))_onSuccess onError:(void(^)(NSError *error))_onError {
     
     NSString *urlString = [[DataManager getInstance] getURL:baseUrl];
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    NSURLSessionConfiguration *configurationSession = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:configurationSession delegate:self delegateQueue:[NSOperationQueue mainQueue]];
-    NSMutableString *urlParams = [[NSMutableString alloc] init];
-    NSMutableString *mainUrl = [[NSMutableString alloc] initWithString:urlString];
-    if (dictParameter) {
-        for (NSString *key in dictParameter) {
-            if(urlParams.length){
-                [urlParams appendString:@":"];
-            }
-            NSString *value  = [dictParameter objectForKey:key];
-            [urlParams appendFormat:@"/%@",value];
-        }
-        [mainUrl appendString:urlParams];
-    }
-    NSMutableURLRequest *requestUrl = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:mainUrl]];
     
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    NSURLSessionConfiguration *configurationSession = [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:configurationSession delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    
+    NSMutableString *mainUrl = [[NSMutableString alloc] initWithString:urlString];
+    
+    NSMutableURLRequest *requestUrl = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:mainUrl]];
     
     [requestUrl setValue:appDelegate.accessToken forHTTPHeaderField:@"Authorization"];
     

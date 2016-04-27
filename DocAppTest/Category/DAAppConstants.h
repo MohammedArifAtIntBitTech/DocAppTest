@@ -14,12 +14,14 @@
 
 
 #define kAppDelegate (AppDelegate*)[[UIApplication sharedApplication] delegate]
-#define kBasic_accessCode @"Basic aW50Yml0YXBwOmludGJpdHRlY2gyMDE1"
 
 #define kBaseUrl @"BASE_SERVER_URL"
 
 // List of Users
 #define kAllProviders           @"ALL_PROVIDERS"
+
 #define kAllPatients            @"ALL_PATIENTS"
+
 #define kAllAppointment         @"ALL_APPOINTMENTS"
+
 #define kAllPractices           @"ALL_PRACTICES"

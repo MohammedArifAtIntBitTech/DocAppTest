@@ -53,7 +53,6 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DATableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"default" forIndexPath:indexPath];
-    //[cell.imageView setImage:[self.imageArray objectAtIndex:indexPath.row]];
     return cell;
 }
 
